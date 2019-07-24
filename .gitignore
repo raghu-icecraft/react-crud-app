@@ -24,3 +24,7 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+
+## Intellij related ignores
+.idea
+*.iml
