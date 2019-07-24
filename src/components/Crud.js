@@ -15,6 +15,7 @@ class Crud extends Component {
 
   componentDidMount(){
     this.refs.name.focus();
+    // https://jsonplaceholder.typicode.com/users -- use for testing
     fetch("https://jsonplaceholder.typicode.com/users")
         .then(result => result.json())
         .then(json => {
@@ -82,8 +83,8 @@ class Crud extends Component {
       <div className="App">
         <h2>{this.state.title}</h2>
         <form ref="myForm" className="myForm">
-          <input type="text" ref="name" placeholder="your name" className="formField" />
-          <input type="text" ref="email" placeholder="your email" className="formField" />
+          <input type="text" ref="name" placeholder="Plant name" className="formField" />
+          <input type="text" ref="email" placeholder="Plant email" className="formField" />
           <button onClick={(e)=>this.fSubmit(e)} className="myButton">submit </button>
         </form>
         <pre>
